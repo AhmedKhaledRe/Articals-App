@@ -1,0 +1,30 @@
+<section class="section-artical-list">
+
+<div class="title-main">
+  <span class="title-main-first">Main</span>
+  <span class="title-main-span">|</span>
+  <span class="title-main-knowledge">Knowledge Center</span>
+</div>
+
+<h3 class="title-knowledge">Knowledge Center</h3>
+<div class="thr"></div>
+
+<div class="row">
+  <form class="artical-box-search col-md-4">
+    <input placeholder="write what you are search">
+    <button type="submit"><span><fa-icon class="search" [icon]="searchIcon"></fa-icon></span></button>
+  </form>
+</div>
+
+<div class="row">
+  <div class="col-md-4 col-xs-12" *ngFor="let artical of articals">
+      <app-artical-list-item [artical]="artical"></app-artical-list-item>
+  </div>
+</div>
+
+<div class="row">
+  <div class="but-share col-md-4"></div>
+</div>
+
+</section>
+

@@ -1,0 +1,61 @@
+<section id="articalDetails" *ngIf="artical">
+
+  <div class="title-main">
+    <span class="title-main-first">Artical</span>
+    <span class="title-main-span">|</span>
+    <span class="title-main-details">Details</span>
+  </div>
+
+  <h3 routerLink="/" class="title-artical">Articles</h3>
+
+  <div class="thrfirst"></div>
+
+  <div class="row">
+      <div class="col-md-12">
+        <h4 class="ca-title">{{artical.title}}</h4>
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+    <img class="img-artical container">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <p class="ca-text container">{{artical.body}}</p>
+    </div>
+  </div>
+
+  <br>
+
+  <img class="but-share">
+
+  <div class="thrmid container"></div>
+
+  <br>
+
+  <h3 class="titlecomment">Leave a Comment</h3>
+
+  <div class="status-upload">
+    <form>
+      <h3 class="titleyourcomment">Your Comment</h3>
+      <textarea placeholder="What are you doing right now?" ></textarea>
+      <h3 class="titlename">Name</h3>
+      <input placeholder="Type your name here." >
+      <h3 class="titlename">Email</h3>
+      <input placeholder="Type your email here." >
+      <div><button type="submit"><span>Post</span></button></div>
+    </form>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12 col-xs-12" *ngFor="let comment of comments">
+        <app-artical-detail-comment [comment]="comment">
+        </app-artical-detail-comment>
+    </div>
+  </div>
+
+</section>
+
